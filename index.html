@@ -14,6 +14,7 @@
     <span id="espaco" class="card">
     </span>
     <input id="input_1" type="text" oninput="inp_1()">
+    <input id="input_2" type="text" oninput="inp_2()">
 
     <div class="card">
         <div class="front">A</div>
@@ -131,26 +132,45 @@
 <script>
     gerar_cruzadinha()
 
-    var lista_teste = [1, 2, 3, 4];
-    var cpu_global = "";
-
+    var lista_respostas = [``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``];
     function inp_1() {
-        if (input_1.value == 1) {
-            cpu_global = `CPU`
+        if (input_1.value.toUpperCase() == `CPU`) {
+            lista_respostas[0] = `CPU`
         } else {
-            cpu_global = ``
+            lista_respostas[0] = ``
         }
-        console.log(`ONCHANGE`, input_1.value)
+        console.log(`ONCHANGE_1`, input_1.value)
 
-        if (cpu_global == `CPU`) {
+        if (lista_respostas[0] == `CPU`) {
             p_45.innerHTML = `<span class="front" id="CPU">C</span>`;
             p_46.innerHTML = `<span class="front" id="CPU">P</span>`;
             p_47.innerHTML = `<span class="front" id="CPU">U</span>`;
-        } else if (cpu_global == ``) {
+        } else if (lista_respostas[0] == ``) {
             p_45.innerHTML = `<span class="back" id="CPU"></span>`;
             p_46.innerHTML = `<span class="back" id="CPU"></span>`;
             p_47.innerHTML = `<span class="back" id="CPU"></span>`;
         }
+
+    }
+
+    function inp_2() {
+        if (input_2.value.toUpperCase() == `ULA`) {
+            lista_respostas[1] = `ULA`
+        } else {
+            lista_respostas[1] = ``
+        }
+        console.log(`ONCHANGE_2`, input_2.value)
+
+        if (lista_respostas[1] == `ULA`) {
+            p_45.innerHTML = `<span class="front" id="ULA">U</span>`;
+            p_68.innerHTML = `<span class="front" id="ULA">L</span>`;
+            p_89.innerHTML = `<span class="front" id="ULA">A</span>`;
+        } else if (lista_respostas[1] == ``) {
+            p_45.innerHTML = `<span class="back" id="ULA"></span>`;
+            p_68.innerHTML = `<span class="back" id="ULA"></span>`;
+            p_89.innerHTML = `<span class="back" id="ULA"></span>`;
+        }
+
     }
 
 
@@ -167,7 +187,15 @@
                 espaco.innerHTML += `
                     <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
-            } else {
+            } else if (i == 68) {
+                espaco.innerHTML += `
+                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                `;
+            } else if (i == 89) {
+                espaco.innerHTML += `
+                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                `;
+            }else {
                 espaco.innerHTML += `
                     <span class="back" style="background-color: grey; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;

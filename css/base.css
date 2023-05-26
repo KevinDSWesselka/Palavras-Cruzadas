@@ -50,7 +50,7 @@ h1 {
 }
 
 .card {
-    height: 400px; width: 220px;
+    height: 200px; width: 200px;
     perspective: 1000px;
 }
 
@@ -70,7 +70,7 @@ h1 {
 
 .card .front{
     transform: rotateY(-180deg);
-    background-color: blue;
+    
 }
 
 .card .back{
