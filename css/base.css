@@ -1,0 +1,78 @@
+*{}
+
+.container {
+    margin: 2%;
+    text-align: center;
+    background-color: rgba(51, 0, 61, 0.103);
+}
+
+.caixa input {
+    width: 11px;
+    border: 0ch;
+    background-color: rgba(255, 255, 255, 0.103);
+}
+
+button {
+    background-color: green;
+    color: white;
+}
+
+h1 {
+    color: white;
+    background-color: rgb(6, 0, 32);
+}
+
+.fundo_preto {
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 2px;
+    width: 21px;
+    height: 21px;
+}
+
+.traco {
+    background-color: rgba(56, 56, 56, 0.349);
+}
+
+.texto {
+    width: 11px;
+    text-align: center;
+    color: rgb(163, 0, 0);
+    background-color: rgba(51, 0, 61, 0.103);
+}
+
+.box {
+    background-color: rgb(216, 216, 216);
+    overflow-y: scroll;
+    height: 220px;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 1%;
+}
+
+.card {
+    height: 400px; width: 220px;
+    perspective: 1000px;
+}
+
+.front, .back{
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.card .front{
+    transform: rotateY(-180deg);
+    background-color: blue;
+}
+
+.card .back{
+    transform: rotateY(0deg);
+}

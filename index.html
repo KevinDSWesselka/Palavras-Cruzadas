@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/base.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <span id="espaco" class="card">
+    </span>
+    <input id="input_1" type="text" oninput="inp_1()">
+
+    <div class="card">
+        <div class="front">A</div>
+        <div class="back">B</div>
+    </div>
+
+    <div class="questionario">
+
+        <h4>
+            A ___ é o componente principal de um computador responsável por executar as instruções e processar os dados.
+            Ela é conhecida como o "cérebro" do computador.
+
+
+        </h4> <input class="campoPergunta" type="text"> <br> <br> <br>
+
+
+        <h4>
+            A ___ é um componente da CPU que realiza operações lógicas e aritméticas, como adição, subtração,
+            multiplicação,
+            divisão e comparações. Ela desempenha um papel crucial no processamento dos dados.
+
+        </h4> <input class="campoPergunta" type="text"> <br> <br> <br>
+
+
+        <h4>
+            Os ___ são pequenas áreas de armazenamento dentro da CPU que são usadas para armazenar dados temporários
+            e
+            executar operações. Eles são muito rápidos em relação à memória principal. Os registradores estão
+            localizados no
+            interior da CPU.
+        </h4> <input class="campoPergunta" type="text"> <br> <br> <br>
+
+        <h4>
+
+            ___ é uma memória volátil usada para armazenar dados temporariamente enquanto o
+            computador está em funcionamento.
+
+            ___ é uma memória não volátil que contém instruções e dados que não podem ser
+            alterados.
+
+            ___ é uma memória que pode ser programada e
+            apagada eletronicamente.
+
+            ___ é uma memória não volátil usada em dispositivos de armazenamento como pen drives, cartões de memória
+            e
+            unidades de estado sólido.
+
+            ___ refere-se a dispositivos de armazenamento de grande capacidade, como discos rígidos, SSDs e
+            fitas magnéticas.
+        </h4> <input class="campoPergunta" type="text"> <input class="campoPergunta" type="text"> <input
+            class="campoPergunta" type="text"> <input class="campoPergunta" type="text"> <input class="campoPergunta"
+            type="text"> <br> <br> <br>
+
+        <h4>
+            ___ é um recurso de hardware que permite que dispositivos periféricos acessem diretamente a memória do
+            sistema, sem a intervenção da CPU. Isso ajuda a melhorar a eficiência do sistema, reduzindo a sobrecarga
+            da CPU durante transferências de dados de alta velocidade.
+        </h4> <input class="campoPergunta" type="text"> <br> <br> <br>
+
+        <h4>
+            ___ é um sinal utilizado para selecionar um dispositivo específico em um barramento de dados ou
+            endereço. Ele é usado para indicar qual dispositivo receberá ou enviará dados quando vários dispositivos
+            estiverem conectados ao mesmo barramento.
+        </h4> <input class="campoPergunta" type="text"> <br> <br> <br>
+
+        <h4>
+            O ___ é um conjunto de fios que transporta informações sobre a localização de memória ou dispositivos de
+            E/S. O ___ é um conjunto de fios que transporta os próprios dados entre a CPU e a memória ou
+            dispositivos de E/S.
+        </h4> <input class="campoPergunta" type="text"> <input class="campoPergunta" type="text"> <br> <br> <br>
+
+        <h4>
+            O __ é um conjunto de fios que transporta informações sobre a localização de memória ou dispositivos de E/S.
+            O ___ é um conjunto de fios que transporta os próprios dados entre a CPU e a memória ou dispositivos de E/S.
+        </h4> <input class="campoPergunta" type="text"> <input class="campoPergunta" type="text"> <br> <br> <br>
+
+        <h4>
+            Os processadores __ e __ são fabricados pela Intel. O processador Intel Core ___ foi lançado pela
+            primeira vez em 2009, enquanto o Intel Core __ foi lançado em 2008. Ambos os processadores são
+            conhecidos por sua potência e desempenho em tarefas exigentes. O __ geralmente é usado em computadores
+            voltados para tarefas de médio porte, enquanto o __ é mais comumente encontrado em computadores de alto
+            desempenho, como estações de trabalho e laptops para jogos. As características específicas podem variar
+            entre diferentes gerações e modelos desses processadores.
+
+        </h4> <input class="campoPergunta" type="text"> <input class="campoPergunta" type="text"> <br> <br> <br>
+        <h4>
+            Um processador ___ possui dois núcleos de processamento independentes em um único chip, permitindo que
+            execute duas tarefas simultaneamente. Um exemplo de processador ___ é o Intel Core 2 Duo. Já um
+            processador ____ possui quatro núcleos de processamento, permitindo maior capacidade de multitarefa e
+            processamento paralelo. Um exemplo é o Intel Core i7-7700K
+
+        </h4> <input class="campoPergunta" type="text"> <input class="campoPergunta" type="text"> <br> <br> <br>
+        <h4>
+            ___ são unidades de execução dentro de um processo. Elas representam caminhos independentes de execução
+            que podem ser gerenciados pelo sistema operacional. Threads permitem a execução simultânea de várias
+            partes de um programa. Um exemplo de utilização de threads é um navegador da web que pode executar
+            várias tarefas em paralelo, como baixar arquivos enquanto renderiza uma página da web.
+
+        </h4> <input class="campoPergunta" type="text"> <br> <br> <br>
+        <h4>
+            A ____ é uma memória de alta velocidade e baixa latência que armazena dados frequentemente acessados
+            pelo processador. Ela atua como uma camada intermediária entre o processador e a memória principal,
+            permitindo um acesso mais rápido aos dados. A utilização da ____ ajuda a reduzir o tempo de acesso à
+            memória principal, melhorando o desempenho do sistema como um todo.
+
+
+        </h4> <input class="campoPergunta" type="text"> <br> <br> <br>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    gerar_cruzadinha()
+
+    var lista_teste = [1, 2, 3, 4];
+    var cpu_global = "";
+
+    function inp_1() {
+        if (input_1.value == 1) {
+            cpu_global = `CPU`
+        } else {
+            cpu_global = ``
+        }
+        console.log(`ONCHANGE`, input_1.value)
+
+        if (cpu_global == `CPU`) {
+            p_45.innerHTML = `<span class="front" id="CPU">C</span>`;
+            p_46.innerHTML = `<span class="front" id="CPU">P</span>`;
+            p_47.innerHTML = `<span class="front" id="CPU">U</span>`;
+        } else if (cpu_global == ``) {
+            p_45.innerHTML = `<span class="back" id="CPU"></span>`;
+            p_46.innerHTML = `<span class="back" id="CPU"></span>`;
+            p_47.innerHTML = `<span class="back" id="CPU"></span>`;
+        }
+    }
+
+
+    function gerar_cruzadinha() {
+        for (i = 1; i < 421; i++) {
+
+            if (i == 45) {
+                espaco.innerHTML += ` <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>`;
+            } else if (i == 46) {
+                espaco.innerHTML += `
+                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                `;
+            } else if (i == 47) {
+                espaco.innerHTML += `
+                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                `;
+            } else {
+                espaco.innerHTML += `
+                    <span class="back" style="background-color: grey; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                `;
+            }
+
+            if (i % 21 == 0) {
+                espaco.innerHTML += `<p/>`
+            }
+
+        }
+    }
+</script>
