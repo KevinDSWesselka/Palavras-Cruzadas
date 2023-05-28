@@ -175,7 +175,7 @@
 
     }
 
-    function input_3(){
+    function inp_3(){
         if (input_3.value.toUpperCase() == `ADDRESS BUS`) {
             lista_respostas[2] = `ADDRESS BUS`
         } else {
@@ -183,10 +183,17 @@
         }
         console.log(`ONCHANGE_3`, input_3.value)
 
-        if (lista_respostas[2] == `address_bus`) {
-            p_47.innerHTML = `<span class="front" id="CPU_AND_address_bus">U</span>`;
-            p_68.innerHTML = `<span class="front" id="address_bus">L</span>`;
-            p_89.innerHTML = `<span class="front" id="address_bus">A</span>`;
+        if (lista_respostas[2] == `ADDRESS BUS`) {
+            p_90.innerHTML = `<span class="front" id="ULA_AND_address_bus">D</span>`;
+            p_91.innerHTML = `<span class="front" id="address_bus">D</span>`;
+            p_92.innerHTML = `<span class="front" id="address_bus">R</span>`;
+            p_93.innerHTML = `<span class="front" id="address_bus">E</span>`;
+            p_94.innerHTML = `<span class="front" id="address_bus">S</span>`;
+            p_95.innerHTML = `<span class="front" id="address_bus">S</span>`;
+            
+            p_97.innerHTML = `<span class="front" id="address_bus">B</span>`;
+            p_98.innerHTML = `<span class="front" id="address_bus">U</span>`;
+            p_99.innerHTML = `<span class="front" id="address_bus">S</span>`;
         } else if (lista_respostas[2] == ``) {
             p_68.innerHTML = `<span class="back" id="address_bus"></span>`;
             p_89.innerHTML = `<span class="back" id="address_bus"></span>`;
@@ -206,7 +213,7 @@
                 `;
             } 
             
-            //ULA
+            //U  CPU e ULA
             else if (i == 47) {
                 espaco.innerHTML += `
                     <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
@@ -221,7 +228,7 @@
                 `;
             }
             
-            //ADDRESS BUS
+            //A ULA e ADDRESS BUS
             else if (i == 90) {
                 espaco.innerHTML += `
                     <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
