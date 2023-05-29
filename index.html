@@ -11,7 +11,6 @@
 
 
 <body>
-
     <span id="espaco" class="card">
     </span>
     <input id="input_1" type="text" oninput="inp_1()">
@@ -19,8 +18,8 @@
     <input id="input_3" type="text" oninput="inp_3()">
 
     <div class="card">
-        <div class="front">A</div>
-        <div class="back">B</div>
+        <div class="fundo_preto">A</div>
+        <div class="fundo_preto">B</div>
     </div>
 
     <div class="questionario">
@@ -145,13 +144,13 @@
         console.log(`ONCHANGE_1`, input_1.value)
 
         if (lista_respostas[0] == `CPU`) {
-            p_45.innerHTML = `<span class="front" id="CPU_AND_ULA">C</span>`;
-            p_46.innerHTML = `<span class="front" id="CPU">P</span>`;
-            p_47.innerHTML = `<span class="front" id="CPU">U</span>`;
+            p_45.innerHTML = `<span class="fundo_preto" id="CPU_AND_ULA">C</span>`;
+            p_46.innerHTML = `<span class="fundo_preto" id="CPU">P</span>`;
+            p_47.innerHTML = `<span class="fundo_preto" id="CPU">U</span>`;
         } else if (lista_respostas[0] == ``) {
-            p_45.innerHTML = `<span class="back" id="CPU"></span>`;
-            p_46.innerHTML = `<span class="back" id="CPU"></span>`;
-            p_47.innerHTML = `<span class="back" id="CPU"></span>`;
+            p_45.innerHTML = `<span class="fundo_preto" id="CPU"></span>`;
+            p_46.innerHTML = `<span class="fundo_preto" id="CPU"></span>`;
+            p_47.innerHTML = `<span class="fundo_preto" id="CPU"></span>`;
         }
 
     }
@@ -165,12 +164,12 @@
         console.log(`ONCHANGE_2`, input_2.value)
 
         if (lista_respostas[1] == `ULA`) {
-            p_47.innerHTML = `<span class="front" id="CPU_AND_ULA">U</span>`;
-            p_68.innerHTML = `<span class="front" id="ULA">L</span>`;
-            p_89.innerHTML = `<span class="front" id="ULA">A</span>`;
+            p_47.innerHTML = `<span class="fundo_preto" id="CPU_AND_ULA">U</span>`;
+            p_68.innerHTML = `<span class="fundo_preto" id="ULA">L</span>`;
+            p_89.innerHTML = `<span class="fundo_preto" id="ULA">A</span>`;
         } else if (lista_respostas[1] == ``) {
-            p_68.innerHTML = `<span class="back" id="ULA"></span>`;
-            p_89.innerHTML = `<span class="back" id="ULA"></span>`;
+            p_68.innerHTML = `<span class="fundo_preto" id="ULA"></span>`;
+            p_89.innerHTML = `<span class="fundo_preto" id="ULA"></span>`;
         }
 
     }
@@ -184,27 +183,27 @@
         console.log(`ONCHANGE_3`, input_3.value)
 
         if (lista_respostas[2] == `ADDRESS BUS`) {
-            p_90.innerHTML = `<span class="front" id="ULA_AND_address_bus">D</span>`;
-            p_91.innerHTML = `<span class="front" id="address_bus">D</span>`;
-            p_92.innerHTML = `<span class="front" id="address_bus">R</span>`;
-            p_93.innerHTML = `<span class="front" id="address_bus">E</span>`;
-            p_94.innerHTML = `<span class="front" id="address_bus">S</span>`;
-            p_95.innerHTML = `<span class="front" id="address_bus">S</span>`;
+            p_90.innerHTML = `<span class="fundo_preto" id="ULA_AND_address_bus">D</span>`;
+            p_91.innerHTML = `<span class="fundo_preto" id="address_bus">D</span>`;
+            p_92.innerHTML = `<span class="fundo_preto" id="address_bus">R</span>`;
+            p_93.innerHTML = `<span class="fundo_preto" id="address_bus">E</span>`;
+            p_94.innerHTML = `<span class="fundo_preto" id="address_bus">S</span>`;
+            p_95.innerHTML = `<span class="fundo_preto" id="address_bus">S</span>`;
             
-            p_97.innerHTML = `<span class="front" id="address_bus">B</span>`;
-            p_98.innerHTML = `<span class="front" id="address_bus">U</span>`;
-            p_99.innerHTML = `<span class="front" id="address_bus">S</span>`;
+            p_97.innerHTML = `<span class="fundo_preto" id="address_bus">B</span>`;
+            p_98.innerHTML = `<span class="fundo_preto" id="address_bus">U</span>`;
+            p_99.innerHTML = `<span class="fundo_preto" id="address_bus">S</span>`;
         } else if (lista_respostas[2] == ``) {
-            p_90.innerHTML = `<span class="front" id="ULA_AND_address_bus"></span>`;
-            p_91.innerHTML = `<span class="front" id="address_bus"></span>`;
-            p_92.innerHTML = `<span class="front" id="address_bus"></span>`;
-            p_93.innerHTML = `<span class="front" id="address_bus"></span>`;
-            p_94.innerHTML = `<span class="front" id="address_bus"></span>`;
-            p_95.innerHTML = `<span class="front" id="address_bus"></span>`;
+            p_90.innerHTML = `<span class="fundo_preto" id="ULA_AND_address_bus"></span>`;
+            p_91.innerHTML = `<span class="fundo_preto" id="address_bus"></span>`;
+            p_92.innerHTML = `<span class="fundo_preto" id="address_bus"></span>`;
+            p_93.innerHTML = `<span class="fundo_preto" id="address_bus"></span>`;
+            p_94.innerHTML = `<span class="fundo_preto" id="address_bus"></span>`;
+            p_95.innerHTML = `<span class="fundo_preto" id="address_bus"></span>`;
             
-            p_97.innerHTML = `<span class="front" id="address_bus"></span>`;
-            p_98.innerHTML = `<span class="front" id="address_bus"></span>`;
-            p_99.innerHTML = `<span class="front" id="address_bus"></span>`;
+            p_97.innerHTML = `<span class="fundo_preto" id="address_bus"></span>`;
+            p_98.innerHTML = `<span class="fundo_preto" id="address_bus"></span>`;
+            p_99.innerHTML = `<span class="fundo_preto" id="address_bus"></span>`;
         }
     }
 
@@ -214,76 +213,76 @@
 
             //CPU
             if (i == 45) {
-                espaco.innerHTML += ` <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>`;
+                espaco.innerHTML += ` <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>`;
             } else if (i == 46) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } 
             
             //U  CPU e ULA
             else if (i == 47) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } else if (i == 68) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } else if (i == 89) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             }
             
             //A ULA e ADDRESS BUS
             else if (i == 90) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } else if (i == 91) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } else if (i == 92) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } else if (i == 93) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } else if (i == 93) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } else if (i == 94) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } else if (i == 95) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } else if (i == 96) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: BLUE; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: BLUE; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } else if (i == 97) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } else if (i == 98) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             } else if (i == 99) {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: red; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             }  else {
                 espaco.innerHTML += `
-                    <span class="back" style="background-color: grey; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
+                    <span class="fundo_preto" style="text-decoration: none; background-color: grey; border: 2px solid; padding: 6px 10px; margin: 5px;" id="p_${i}"></span>
                 `;
             }
 

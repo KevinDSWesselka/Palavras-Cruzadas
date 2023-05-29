@@ -76,3 +76,18 @@ h1 {
 .card .back{
     transform: rotateY(0deg);
 }
+
+.teste {
+    width: 50px;
+    animation: go-back 1s infinite alternate;
+    flex-direction: row;
+}
+
+@keyframes go-back {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
