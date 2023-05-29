@@ -1,5 +1,10 @@
 *{}
 
+.tabela{
+    display: flex;
+    justify-content: center;
+}
+
 .container {
     margin: 2%;
     text-align: center;
@@ -24,6 +29,13 @@ h1 {
 
 .fundo_preto {
     background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 2px;
+    width: 21px;
+    height: 21px;
+}
+
+.fundo_vermelho {
+    background-color: rgba(255, 0, 0, 0.514);
     border-radius: 2px;
     width: 21px;
     height: 21px;
