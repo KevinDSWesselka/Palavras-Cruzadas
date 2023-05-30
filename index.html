@@ -21,6 +21,7 @@
     <input id="input_1" type="text" oninput="inp_1()">
     <input id="input_2" type="text" oninput="inp_2()">
     <input id="input_3" type="text" oninput="inp_3()">
+    <input id="input_4" type="text" oninput="inp_4()">
 
     <div class="card">
         <div class="fundo_preto">A</div>
@@ -159,7 +160,7 @@
             alterarCorTextoQuadradinho('linha_3', 4, 'red', '');
         }
     }
-    
+
     function inp_2() {
         if (input_2.value.toUpperCase() == `ULA`) {
             lista_respostas[1] = `ULA`;
@@ -199,7 +200,7 @@
             alterarCorTextoQuadradinho('linha_5', 12, 'GREEN', 'B');
             alterarCorTextoQuadradinho('linha_5', 13, 'GREEN', 'U');
             alterarCorTextoQuadradinho('linha_5', 14, 'GREEN', 'S');
-        } else if (lista_respostas[1] == '') {
+        } else if (lista_respostas[2] == '') {
             alterarCorTextoQuadradinho('linha_5', 4, 'red', '');
             alterarCorTextoQuadradinho('linha_5', 5, 'red', '');
             alterarCorTextoQuadradinho('linha_5', 6, 'red', '');
@@ -211,6 +212,46 @@
             alterarCorTextoQuadradinho('linha_5', 12, 'RED', '');
             alterarCorTextoQuadradinho('linha_5', 13, 'RED', '');
             alterarCorTextoQuadradinho('linha_5', 14, 'RED', '');
+
+        }
+    }
+
+    function inp_4() {
+        if (input_4.value.toUpperCase() == `REGISTRADORES`) {
+            lista_respostas[3] = `REGISTRADORES`;
+        } else {
+            lista_respostas[3] = ``;
+        }
+        console.log(`ONCHANGE_4`, input_4.value);
+
+        if (lista_respostas[3] == 'REGISTRADORES') {
+            alterarCorTextoQuadradinho('linha_5', 7, 'GREEN', 'R'); 
+            alterarCorTextoQuadradinho('linha_6', 7, 'GREEN', 'E');
+            alterarCorTextoQuadradinho('linha_7', 7, 'GREEN', 'G');
+            alterarCorTextoQuadradinho('linha_8', 7, 'GREEN', 'I');
+            alterarCorTextoQuadradinho('linha_9', 7, 'GREEN', 'S');
+            alterarCorTextoQuadradinho('linha_10', 7, 'GREEN', 'T');
+            alterarCorTextoQuadradinho('linha_11', 7, 'GREEN', 'R');
+            alterarCorTextoQuadradinho('linha_12', 7, 'GREEN', 'A');
+            alterarCorTextoQuadradinho('linha_13', 7, 'GREEN', 'D');
+            alterarCorTextoQuadradinho('linha_14', 7, 'GREEN', 'O');
+            alterarCorTextoQuadradinho('linha_15', 7, 'GREEN', 'R');
+            alterarCorTextoQuadradinho('linha_16', 7, 'GREEN', 'E');
+            alterarCorTextoQuadradinho('linha_17', 7, 'GREEN', 'S');
+        } else if (lista_respostas[3] == '') {
+            alterarCorTextoQuadradinho('linha_5', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_6', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_7', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_8', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_9', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_10', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_11', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_12', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_13', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_14', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_15', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_16', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_17', 7, 'red', '');
 
         }
     }
@@ -242,21 +283,37 @@
     alterarCorTextoQuadradinho('linha_5', 4, 'red', '');
 
     // ADDRESS BUS
-   alterarCorTextoQuadradinho('linha_5', 3, 'GOLD', '3-');
-   // alterarCorTextoQuadradinho('linha_5', 4, 'red', '');A
-   alterarCorTextoQuadradinho('linha_5', 5, 'red', '');
-   alterarCorTextoQuadradinho('linha_5', 6, 'red', '');
-   alterarCorTextoQuadradinho('linha_5', 7, 'red', '');
-   alterarCorTextoQuadradinho('linha_5', 8, 'red', '');
-   alterarCorTextoQuadradinho('linha_5', 9, 'red', '');
-   alterarCorTextoQuadradinho('linha_5', 10, 'red', '');
-   alterarCorTextoQuadradinho('linha_5', 11, 'BLUE', '');
-   alterarCorTextoQuadradinho('linha_5', 12, 'RED', '');
-   alterarCorTextoQuadradinho('linha_5', 13, 'RED', '');
-   alterarCorTextoQuadradinho('linha_5', 14, 'RED', '');
+    alterarCorTextoQuadradinho('linha_5', 3, 'GOLD', '3-');
+    // alterarCorTextoQuadradinho('linha_5', 4, 'red', '');A
+    alterarCorTextoQuadradinho('linha_5', 5, 'red', '');
+    alterarCorTextoQuadradinho('linha_5', 6, 'red', '');
+    alterarCorTextoQuadradinho('linha_5', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_5', 8, 'red', '');
+    alterarCorTextoQuadradinho('linha_5', 9, 'red', '');
+    alterarCorTextoQuadradinho('linha_5', 10, 'red', '');
+    alterarCorTextoQuadradinho('linha_5', 11, 'BLUE', '');
+    alterarCorTextoQuadradinho('linha_5', 12, 'RED', '');
+    alterarCorTextoQuadradinho('linha_5', 13, 'RED', '');
+    alterarCorTextoQuadradinho('linha_5', 14, 'RED', '');
+
+    // REGISTRADORES 
+    alterarCorTextoQuadradinho('linha_4', 7, 'GOLD', '4-');
+    // alterarCorTextoQuadradinho('linha_5', 7, 'red', '');R
+    alterarCorTextoQuadradinho('linha_6', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_7', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_8', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_9', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_10', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_11', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_12', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_13', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_14', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_15', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_16', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_17', 7, 'red', '');
 
     function gerar_cruzadinha() {
-        for (i = 1; i < 15; i++) {
+        for (i = 1; i < 21; i++) {
 
             tb_sla.innerHTML += `
                 <tr id="linha_${i}">
