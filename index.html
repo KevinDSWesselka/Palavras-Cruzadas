@@ -127,7 +127,7 @@
             memória principal, melhorando o desempenho do sistema como um todo.
 
 
-        </h4> <input  class="campoPergunta" type="text"> <br> <br> <br>
+        </h4> <input class="campoPergunta" type="text"> <br> <br> <br>
 
 
     </div>
@@ -142,51 +142,46 @@
     var lista_respostas = [];
 
     function inp_1() {
-  if (input_1.value.toUpperCase() == `CPU`) {
-    lista_respostas[0] = `CPU`;
-  } else {
-    lista_respostas[0] = ``;
-  }
-  console.log(`ONCHANGE_1`, input_1.value);
+        if (input_1.value.toUpperCase() == `CPU`) {
+            lista_respostas[0] = `CPU`;
+        } else {
+            lista_respostas[0] = ``;
+        }
+        console.log(`ONCHANGE_1`, input_1.value);
 
-  var linha = document.getElementById('linha_3');
+        var linha = document.getElementById('linha_3');
 
-  if (lista_respostas[0] == `CPU`) {
-    document.getElementById('texto_coluna2').innerText = 'C';
-    document.getElementById('texto_coluna3').innerText = 'P';
-    document.getElementById('texto_coluna4').innerText = 'U';
+        if (lista_respostas[0] === 'CPU') {
 
-    alterarCorQuadradinho('linha_3', 2, 'green');
-    alterarCorQuadradinho('linha_3', 3, 'green');
-    alterarCorQuadradinho('linha_3', 4, 'green');
-  } else if (lista_respostas[0] == ``) {
-    document.getElementById('texto_coluna2').innerText = '';
-    document.getElementById('texto_coluna3').innerText = '';
-    document.getElementById('texto_coluna4').innerText = '';
+            alterarCorTextoQuadradinho('linha_3', 2, 'green', 'C');
+            alterarCorTextoQuadradinho('linha_3', 3, 'green', 'P');
+            alterarCorTextoQuadradinho('linha_3', 4, 'green', 'U');
+        } else if (lista_respostas[0] === '') {
+            document.getElementById('texto_coluna2').innerText = '';
+            document.getElementById('texto_coluna3').innerText = '';
+            document.getElementById('texto_coluna4').innerText = '';
 
-    alterarCorQuadradinho('linha_3', 2, 'red');
-    alterarCorQuadradinho('linha_3', 3, 'red');
-    alterarCorQuadradinho('linha_3', 4, 'red');
-  }
-}
-
-    // Função para alterar a cor de um quadradinho em uma linha específica
-    function alterarCorQuadradinho(idLinha, indiceColuna, cor) {
-            var linha = document.getElementById(idLinha);
-            if (linha) {
-                var quadradinho = linha.getElementsByTagName('td')[indiceColuna];
-                if (quadradinho) {
-                    quadradinho.style.backgroundColor = cor;
-                }
+            alterarCorTextoQuadradinho('linha_3', 2, 'red', '');
+            alterarCorTextoQuadradinho('linha_3', 3, 'red', '');
+            alterarCorTextoQuadradinho('linha_3', 4, 'red', '');
+        }
+    }
+    // Função para alterar a cor de fundo e o texto de um quadradinho em uma linha específica
+    function alterarCorTextoQuadradinho(idLinha, indiceColuna, cor, texto) {
+        var linha = document.getElementById(idLinha);
+        if (linha) {
+            var quadradinho = linha.getElementsByTagName('td')[indiceColuna];
+            if (quadradinho) {
+                quadradinho.style.backgroundColor = cor;
+                quadradinho.innerText = texto;
             }
         }
+    }
 
-        // Exemplo de uso
-        alterarCorQuadradinho('linha_3', 2, 'red');
-        alterarCorQuadradinho('linha_3', 3, 'red');
-        alterarCorQuadradinho('linha_3', 4, 'red');
-
-
+    // Exemplo de uso
+    alterarCorTextoQuadradinho('linha_3', 2, 'red', '');
+    alterarCorTextoQuadradinho('linha_3', 3, 'red', '');
+    alterarCorTextoQuadradinho('linha_3', 4, 'red', '');
     function gerar_cruzadinha() {
         for (i = 1; i < 15; i++) {
 
@@ -218,6 +213,4 @@
         }
 
     }
-
-    document.getElementById(coluna_2)
 </script>
