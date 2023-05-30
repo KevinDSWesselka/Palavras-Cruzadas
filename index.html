@@ -197,9 +197,9 @@
             divPergunta.innerHTML = `
             <h4>
                 <span class="titulo">3</span>
-                Os ___ são pequenas áreas de armazenamento dentro da CPU que são usadas para armazenar dados temporários
+                Os _____ são pequenas áreas de armazenamento dentro da CPU que são usadas para armazenar dados temporários
                 e
-                executar operações. Eles são muito rápidos em relação à memória principal. Os registradores estão
+                executar operações. Eles são muito rápidos em relação à memória principal. Os _____ estão
                 localizados no
                 interior da CPU.
 
@@ -285,9 +285,7 @@
             divPergunta.innerHTML = `
             <h4>
                 <span class="titulo">5</span>
-                ___ é um recurso de hardware que permite que dispositivos periféricos acessem diretamente a memória do
-                sistema, sem a intervenção da CPU. Isso ajuda a melhorar a eficiência do sistema, reduzindo a sobrecarga
-                da CPU durante transferências de dados de alta velocidade.
+                __________ é uma memória volátil usada para armazenar dados temporariamente enquanto o computador está em funcionamento.  
 
                 <input id="input_5" type="text" oninput="inp_5()">
                 
@@ -327,9 +325,7 @@
             divPergunta.innerHTML = `
             <h4>
                 <span class="titulo">6</span>
-                ___ é um sinal utilizado para selecionar um dispositivo específico em um barramento de dados ou
-                endereço. Ele é usado para indicar qual dispositivo receberá ou enviará dados quando vários dispositivos
-                estiverem conectados ao mesmo barramento.
+                _______ é uma memória não volátil que contém instruções e dados que não podem ser alterados. 
                 <input id="input_6" type="text" oninput="inp_6()">
             </h4> <br>
             `
@@ -353,10 +349,9 @@
             alterarCorTextoQuadradinho('linha_15', 8, 'GREEN', 'O');
             alterarCorTextoQuadradinho('linha_15', 9, 'GREEN', 'M');
             divPergunta.innerHTML = ` 
+            <h4>
             <span class="titulo">6</span>
-                ___ é um sinal utilizado para selecionar um dispositivo específico em um barramento de dados ou
-                endereço. Ele é usado para indicar qual dispositivo receberá ou enviará dados quando vários dispositivos
-                estiverem conectados ao mesmo barramento.
+            Qual é o nome de uma linha popular de processadores da Intel lançada em 2008, que inclui modelos como o ____-9700K e o ____-10700K?
                 <input id="input_7" type="text" oninput="inp_7()">
             </h4><br> 
             `
@@ -380,20 +375,15 @@
             alterarCorTextoQuadradinho('linha_8', 7, 'GREEN', 'I');
             alterarCorTextoQuadradinho('linha_8', 8, 'GREEN', '7');
 
-            divPergunta.innerHTML = `
-                
+            divPergunta.innerHTML = ` 
             <h4>
-                Qual é o nome de uma linha popular de processadores da Intel lançada em 2008, que inclui modelos como o ___-9700K e o ___-10700K?
+            <span class="titulo">6</span>
+                ________ é uma memória não volátil usada em dispositivos de armazenamento como pen drives, cartões de memória e unidades de estado sólido. 
             <input id="input_8" type="text" oninput="inp_8()">
             `;
 
-            if (lista_respostas.indexOf('i7') > -1 && lista_respostas.indexOf('i5') > -7) {
-                divResposta.innerHTML = `
-    
-  `;
-            }
-
-            divR
+          
+            
         } else if (lista_respostas[6] == '') {
             alterarCorTextoQuadradinho('linha_8', 7, 'RED', '');
             alterarCorTextoQuadradinho('linha_8', 8, 'RED', '');
@@ -416,7 +406,11 @@
             alterarCorTextoQuadradinho('linha_17', 9, 'GREEN', 'H');
 
             divPergunta.innerHTML = `
+            <h4>
+            <span class="titulo">6</span>
+            Um ________ possui dois núcleos de processamento independentes em um único chip, permitindo que execute duas tarefas simultaneamente.
             <input id="input_9" type="text" oninput="inp_9()">
+            </h4>
             `;
         } else if (lista_respostas[7] == '') {
             alterarCorTextoQuadradinho('linha_17', 5, 'RED', '');
@@ -447,7 +441,11 @@
 
             
             divPergunta.innerHTML = `
+            <h4>
+            <span class="titulo">6</span>
+            ______ refere-se a dispositivos de armazenamento de grande capacidade, como discos rígidos, SSDs e fitas magnéticas. 
             <input id="input_10" type="text" oninput="inp_10()">
+            </h4>
             `;
         } else if (lista_respostas[8] == '') {
             alterarCorTextoQuadradinho('linha_4', 13, 'RED', '');
@@ -487,8 +485,8 @@
 
             divPergunta.innerHTML = `
             <h4>
-            O data bus (barramento de dados) é um conjunto de fios que transporta os próprios dados entre a CPU e a memória ou dispositivos de E/S
-
+            <span class="titulo">6</span>
+           _______ é um conjunto de fios que transporta os próprios dados entre a CPU e a memória ou dispositivos de E/S.
             <input id="input_11" type="text" oninput="inp_11()">
                 
             </h4>
@@ -529,7 +527,11 @@
             alterarCorTextoQuadradinho('linha_12', 26, 'GREEN', 'U'); //U
             alterarCorTextoQuadradinho('linha_13', 26, 'GREEN', 'S'); //S
             divPergunta.innerHTML = `
+            <h4>
+            <span class="titulo">6</span>
+            Um processador ______ possui quatro núcleos de processamento, permitindo maior capacidade de multitarefa e processamento paralelo. Um exemplo é o Intel Core i7-7700K. 
             <input id="input_12" type="text" oninput="inp_12()">
+            </h4>
             `
 
         } else if (lista_respostas[10] == '') {
@@ -562,7 +564,10 @@
             alterarCorTextoQuadradinho('linha_18', 24, 'GREEN', 'E'); //E
 
             divPergunta.innerHTML = `
+            <h4>
+            <span class="titulo">6</span> _______ é um recurso de hardware que permite que dispositivos periféricos acessem diretamente a memória do sistema, sem a intervenção da CPU. Isso ajuda a melhorar a eficiência do sistema, reduzindo a sobrecarga da CPU durante transferências de dados de alta velocidade. 
             <input id="input_13" type="text" oninput="inp_13()">
+            </h4>
             `;
 
         } else if (lista_respostas[11] == '') {
@@ -591,6 +596,9 @@
             alterarCorTextoQuadradinho('linha_14', 20, 'GREEN', 'A'); //A
 
             divPergunta.innerHTML = `
+            <h4>
+            <span class="titulo">6</span>
+            Qual é o nome de uma linha popular de processadores da Intel lançada em 2009, que inclui modelos como o ____-9600K e o ____-10600K?
             <input id="input_14" type="text" oninput="inp_14()">
             `;
 
@@ -614,7 +622,11 @@
             alterarCorTextoQuadradinho('linha_13', 17, 'GREEN', '5'); //5
 
             divPergunta.innerHTML = `
+            <h4>
+            <span class="titulo">6</span>
+            _________ é uma memória que pode ser programada e apagada eletronicamente. 
             <input id="input_15" type="text" oninput="inp_15()">
+            </h4>
             `;
 
         } else if (lista_respostas[13] == '') {
@@ -639,7 +651,11 @@
             alterarCorTextoQuadradinho('linha_18', 28, 'GREEN', 'M'); //M
 
             divPergunta.innerHTML = `
+            <h4>
+            <span class="titulo">6</span>
+            _______ são unidades de execução dentro de um processo. Elas representam caminhos independentes de execução que podem ser gerenciados pelo sistema operacional.
             <input id="input_16" type="text" oninput="inp_16()">
+            </h4>
             `;
 
         } else if (lista_respostas[14] == '') {
@@ -669,7 +685,11 @@
             alterarCorTextoQuadradinho('linha_7', 28, 'GREEN', 'S'); //S
 
             divPergunta.innerHTML = `
+            <h4>
+            <span class="titulo">6</span>
+            ____ é um sinal utilizado para selecionar um dispositivo específico em um barramento de dados ou endereço. Ele é usado para indicar qual dispositivo receberá ou enviará dados quando vários dispositivos estiverem conectados ao mesmo barramento. 
             <input id="input_17" type="text" oninput="inp_17()">
+            </h4>
             `;
 
         } else if (lista_respostas[15] == '') {
@@ -699,6 +719,8 @@
             alterarCorTextoQuadradinho('linha_9', 16, 'GREEN', 'H'); //H
             alterarCorTextoQuadradinho('linha_9', 17, 'GREEN', 'E'); //E
 
+            window.location.href = `https://pt.wikipedia.org/wiki/Bovinos#:~:text=Os%20bovinos%20(latim%20cient%C3%ADfico%3A%20Bovinae,esp%C3%A9cies%20agrupadas%20em%20nove%20g%C3%AAneros.`
+
         } else if (lista_respostas[17] == '') {
             alterarCorTextoQuadradinho('linha_9', 13, 'RED', ''); //C
             alterarCorTextoQuadradinho('linha_9', 14, 'RED', ''); //A
@@ -721,7 +743,11 @@
             alterarCorTextoQuadradinho('linha_7', 28, 'GREEN', 'S'); //S
 
             divPergunta.innerHTML = `
+            <h4>
+            <span class="titulo">6</span>
+            ______ é um sinal utilizado para selecionar um dispositivo específico em um barramento de dados ou endereço. Ele é usado para indicar qual dispositivo receberá ou enviará dados quando vários dispositivos estiverem conectados ao mesmo barramento. 
             <input id="input_18" type="text" oninput="inp_18()">
+            </h4>
             `;
 
         } else if (lista_respostas[15] == '') {
