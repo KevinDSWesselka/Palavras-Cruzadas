@@ -151,21 +151,17 @@
 
         var linha = document.getElementById('linha_3');
 
-        if (lista_respostas[0] === 'CPU') {
-
+        if (lista_respostas[0] == 'CPU') {
             alterarCorTextoQuadradinho('linha_3', 2, 'green', 'C');
             alterarCorTextoQuadradinho('linha_3', 3, 'green', 'P');
             alterarCorTextoQuadradinho('linha_3', 4, 'green', 'U');
-        } else if (lista_respostas[0] === '') {
-            document.getElementById('texto_coluna2').innerText = '';
-            document.getElementById('texto_coluna3').innerText = '';
-            document.getElementById('texto_coluna4').innerText = '';
-
+        } else if (lista_respostas[0] == '') {
             alterarCorTextoQuadradinho('linha_3', 2, 'red', '');
             alterarCorTextoQuadradinho('linha_3', 3, 'red', '');
             alterarCorTextoQuadradinho('linha_3', 4, 'red', '');
         }
     }
+
     // Função para alterar a cor de fundo e o texto de um quadradinho em uma linha específica
     function alterarCorTextoQuadradinho(idLinha, indiceColuna, cor, texto) {
         var linha = document.getElementById(idLinha);
@@ -182,6 +178,7 @@
     alterarCorTextoQuadradinho('linha_3', 2, 'red', '');
     alterarCorTextoQuadradinho('linha_3', 3, 'red', '');
     alterarCorTextoQuadradinho('linha_3', 4, 'red', '');
+
     function gerar_cruzadinha() {
         for (i = 1; i < 15; i++) {
 
