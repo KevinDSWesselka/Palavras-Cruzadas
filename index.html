@@ -23,6 +23,7 @@
     <input id="input_3" type="text" oninput="inp_3()">
     <input id="input_4" type="text" oninput="inp_4()">
     <input id="input_5" type="text" oninput="inp_5()">
+    <input id="input_6" type="text" oninput="inp_6()">
 
     <div class="card">
         <div class="fundo_preto">A</div>
@@ -276,6 +277,25 @@
         }
     }
 
+    function inp_6() {
+        if (input_6.value.toUpperCase() == `ROM`) {
+            lista_respostas[5] = `ROM`;
+        } else {
+            lista_respostas[5] = ``;
+        }
+        console.log(`ONCHANGE_5`, input_6.value);
+
+        if (lista_respostas[5] == 'ROM') {
+            alterarCorTextoQuadradinho('linha_15', 7, 'GREEN', 'R');
+            alterarCorTextoQuadradinho('linha_15', 8, 'GREEN', 'O');
+            alterarCorTextoQuadradinho('linha_15', 9, 'GREEN', 'M');
+        } else if (lista_respostas[5] == '') {
+            alterarCorTextoQuadradinho('linha_15', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_15', 8, 'red', '');
+            alterarCorTextoQuadradinho('linha_15', 9, 'red', '');
+        }
+    }
+
 
     // Função para alterar a cor de fundo e o texto de um quadradinho em uma linha específica
     function alterarCorTextoQuadradinho(idLinha, indiceColuna, cor, texto) {
@@ -337,6 +357,12 @@
     // alterarCorTextoQuadradinho('linha_11', 7, 'red', '');
     alterarCorTextoQuadradinho('linha_11', 8, 'red', '');
     alterarCorTextoQuadradinho('linha_11', 9, 'red', '');
+
+    // ROM 
+    alterarCorTextoQuadradinho('linha_15', 6, 'GOLD', '5-');
+     // alterarCorTextoQuadradinho('linha_15', 7, 'red', '');
+     alterarCorTextoQuadradinho('linha_15', 8, 'red', '');
+    alterarCorTextoQuadradinho('linha_15', 9, 'red', '');
 
     function gerar_cruzadinha() {
         for (i = 1; i < 21; i++) {
