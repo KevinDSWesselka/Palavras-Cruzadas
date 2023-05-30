@@ -1,9 +1,25 @@
 *{}
 
-.tabela{
-    display: flex;
-    justify-content: center;
+body{
+    background-color: #0f2744;
 }
+
+#tb_sla{
+   
+   margin-left: 30vw;
+    
+}
+
+.questionario{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lista{
+    margin: 20px;
+    padding: 12px;
+}
+
 
 .container {
     margin: 2%;
@@ -103,3 +119,37 @@ h1 {
     transform: translateX(0);
   }
 }
+
+h4{
+    font-size: small;
+    background-color: #d2bfb8;
+    border: solid black 1px;
+    padding: 12px;
+    
+}
+
+input{
+    border-radius: 5px;
+    border: solid black 1px;
+    margin: 5px;
+
+}
+
+.titulo{
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.pergunta{
+    width: 250px;
+    height: 100px;
+    margin-left: 40vw;
+    
+    
+}
+
+.perguntaDaVez{
+    
+}
+
+
