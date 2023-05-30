@@ -22,6 +22,7 @@
     <input id="input_2" type="text" oninput="inp_2()">
     <input id="input_3" type="text" oninput="inp_3()">
     <input id="input_4" type="text" oninput="inp_4()">
+    <input id="input_5" type="text" oninput="inp_5()">
 
     <div class="card">
         <div class="fundo_preto">A</div>
@@ -225,7 +226,7 @@
         console.log(`ONCHANGE_4`, input_4.value);
 
         if (lista_respostas[3] == 'REGISTRADORES') {
-            alterarCorTextoQuadradinho('linha_5', 7, 'GREEN', 'R'); 
+            alterarCorTextoQuadradinho('linha_5', 7, 'GREEN', 'R');
             alterarCorTextoQuadradinho('linha_6', 7, 'GREEN', 'E');
             alterarCorTextoQuadradinho('linha_7', 7, 'GREEN', 'G');
             alterarCorTextoQuadradinho('linha_8', 7, 'GREEN', 'I');
@@ -253,6 +254,25 @@
             alterarCorTextoQuadradinho('linha_16', 7, 'red', '');
             alterarCorTextoQuadradinho('linha_17', 7, 'red', '');
 
+        }
+    }
+
+    function inp_5() {
+        if (input_5.value.toUpperCase() == `RAM`) {
+            lista_respostas[4] = `RAM`;
+        } else {
+            lista_respostas[4] = ``;
+        }
+        console.log(`ONCHANGE_5`, input_5.value);
+
+        if (lista_respostas[4] == 'RAM') {
+            alterarCorTextoQuadradinho('linha_11', 7, 'GREEN', 'R');
+            alterarCorTextoQuadradinho('linha_11', 8, 'GREEN', 'A');
+            alterarCorTextoQuadradinho('linha_11', 9, 'GREEN', 'M');
+        } else if (lista_respostas[4] == '') {
+            alterarCorTextoQuadradinho('linha_11', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_11', 8, 'red', '');
+            alterarCorTextoQuadradinho('linha_11', 9, 'red', '');
         }
     }
 
@@ -311,6 +331,12 @@
     alterarCorTextoQuadradinho('linha_15', 7, 'red', '');
     alterarCorTextoQuadradinho('linha_16', 7, 'red', '');
     alterarCorTextoQuadradinho('linha_17', 7, 'red', '');
+
+    // RAM
+    alterarCorTextoQuadradinho('linha_11', 6, 'GOLD', '4-');
+    // alterarCorTextoQuadradinho('linha_11', 7, 'red', '');
+    alterarCorTextoQuadradinho('linha_11', 8, 'red', '');
+    alterarCorTextoQuadradinho('linha_11', 9, 'red', '');
 
     function gerar_cruzadinha() {
         for (i = 1; i < 21; i++) {
