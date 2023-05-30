@@ -149,8 +149,6 @@
         }
         console.log(`ONCHANGE_1`, input_1.value);
 
-        var linha = document.getElementById('linha_3');
-
         if (lista_respostas[0] == 'CPU') {
             alterarCorTextoQuadradinho('linha_3', 2, 'green', 'C');
             alterarCorTextoQuadradinho('linha_3', 3, 'green', 'P');
@@ -161,6 +159,62 @@
             alterarCorTextoQuadradinho('linha_3', 4, 'red', '');
         }
     }
+    
+    function inp_2() {
+        if (input_2.value.toUpperCase() == `ULA`) {
+            lista_respostas[1] = `ULA`;
+        } else {
+            lista_respostas[1] = ``;
+        }
+        console.log(`ONCHANGE_2`, input_2.value);
+
+        if (lista_respostas[1] == 'ULA') {
+            alterarCorTextoQuadradinho('linha_3', 4, 'green', 'U');
+            alterarCorTextoQuadradinho('linha_4', 4, 'green', 'L');
+            alterarCorTextoQuadradinho('linha_5', 4, 'green', 'A');
+        } else if (lista_respostas[1] == '') {
+            alterarCorTextoQuadradinho('linha_3', 4, 'red', '');
+            alterarCorTextoQuadradinho('linha_4', 4, 'red', '');
+            alterarCorTextoQuadradinho('linha_5', 4, 'red', '');
+        }
+    }
+
+    function inp_3() {
+        if (input_3.value.toUpperCase() == `ADDRESS BUS`) {
+            lista_respostas[2] = `ADDRESS BUS`;
+        } else {
+            lista_respostas[2] = ``;
+        }
+        console.log(`ONCHANGE_3`, input_3.value);
+
+        if (lista_respostas[2] == 'ADDRESS BUS') {
+            alterarCorTextoQuadradinho('linha_5', 4, 'GREEN', 'A');
+            alterarCorTextoQuadradinho('linha_5', 5, 'GREEN', 'D');
+            alterarCorTextoQuadradinho('linha_5', 6, 'GREEN', 'D');
+            alterarCorTextoQuadradinho('linha_5', 7, 'GREEN', 'R');
+            alterarCorTextoQuadradinho('linha_5', 8, 'GREEN', 'E');
+            alterarCorTextoQuadradinho('linha_5', 9, 'GREEN', 'S');
+            alterarCorTextoQuadradinho('linha_5', 10, 'GREEN', 'S');
+            alterarCorTextoQuadradinho('linha_5', 11, 'BLUE', '');
+            alterarCorTextoQuadradinho('linha_5', 12, 'GREEN', 'B');
+            alterarCorTextoQuadradinho('linha_5', 13, 'GREEN', 'U');
+            alterarCorTextoQuadradinho('linha_5', 14, 'GREEN', 'S');
+        } else if (lista_respostas[1] == '') {
+            alterarCorTextoQuadradinho('linha_5', 4, 'red', '');
+            alterarCorTextoQuadradinho('linha_5', 5, 'red', '');
+            alterarCorTextoQuadradinho('linha_5', 6, 'red', '');
+            alterarCorTextoQuadradinho('linha_5', 7, 'red', '');
+            alterarCorTextoQuadradinho('linha_5', 8, 'red', '');
+            alterarCorTextoQuadradinho('linha_5', 9, 'red', '');
+            alterarCorTextoQuadradinho('linha_5', 10, 'red', '');
+            alterarCorTextoQuadradinho('linha_5', 11, 'BLUE', '');
+            alterarCorTextoQuadradinho('linha_5', 12, 'RED', '');
+            alterarCorTextoQuadradinho('linha_5', 13, 'RED', '');
+            alterarCorTextoQuadradinho('linha_5', 14, 'RED', '');
+
+        }
+    }
+
 
     // Função para alterar a cor de fundo e o texto de um quadradinho em uma linha específica
     function alterarCorTextoQuadradinho(idLinha, indiceColuna, cor, texto) {
@@ -174,10 +228,32 @@
         }
     }
 
-    // Exemplo de uso
+    // CPU
+    alterarCorTextoQuadradinho('linha_3', 1, 'GOLD', '1-');
+    alterarCorTextoQuadradinho('linha_3', 2, 'red', '');
     alterarCorTextoQuadradinho('linha_3', 2, 'red', '');
     alterarCorTextoQuadradinho('linha_3', 3, 'red', '');
     alterarCorTextoQuadradinho('linha_3', 4, 'red', '');
+
+    // ULA
+    alterarCorTextoQuadradinho('linha_2', 4, 'GOLD', '2-');
+    // alterarCorTextoQuadradinho('linha_3', 2, 'red', '');
+    alterarCorTextoQuadradinho('linha_4', 4, 'red', '');
+    alterarCorTextoQuadradinho('linha_5', 4, 'red', '');
+
+    // ADDRESS BUS
+   alterarCorTextoQuadradinho('linha_5', 3, 'GOLD', '3-');
+   // alterarCorTextoQuadradinho('linha_5', 4, 'red', '');A
+   alterarCorTextoQuadradinho('linha_5', 5, 'red', '');
+   alterarCorTextoQuadradinho('linha_5', 6, 'red', '');
+   alterarCorTextoQuadradinho('linha_5', 7, 'red', '');
+   alterarCorTextoQuadradinho('linha_5', 8, 'red', '');
+   alterarCorTextoQuadradinho('linha_5', 9, 'red', '');
+   alterarCorTextoQuadradinho('linha_5', 10, 'red', '');
+   alterarCorTextoQuadradinho('linha_5', 11, 'BLUE', '');
+   alterarCorTextoQuadradinho('linha_5', 12, 'RED', '');
+   alterarCorTextoQuadradinho('linha_5', 13, 'RED', '');
+   alterarCorTextoQuadradinho('linha_5', 14, 'RED', '');
 
     function gerar_cruzadinha() {
         for (i = 1; i < 15; i++) {
