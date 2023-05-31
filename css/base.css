@@ -27,12 +27,12 @@ body{
     align-items: center;
     margin: auto;
     margin: 0% 25vw ;
+    
 }
 
 .caixa input {
     width: 11px;
     border: 0ch;
-    background-color: rgba(255, 255, 255, 0.103);
 }
 
 button {
@@ -139,16 +139,22 @@ input{
 
 }
 
-.titulo{
-    color: #ffffff;
-    font-size: 1rem;
+.titulo_principal{
+    width: 48.8vw;
+    height: 45px;
+    margin: 0 25vw;
+    text-align: center;
+    background-color: rgb(186, 186, 186);
+}
+
+.titulo_principal h1{
+    margin: auto;
+    margin-top: 10px;
 }
 
 .pergunta{
     width: 250px;
     height: 100px;
-    margin: auto;
-    
-    
+    margin: auto;  
 }
 
