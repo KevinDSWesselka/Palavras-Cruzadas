@@ -6,141 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/base.css">
+    <script type="text/javascript" src="./js/main.js"></script>
     <title>Document</title>
 </head>
 
 
 <body>
-
-
-    <table id="tb_sla">
-
-
-
-    </table>
-
-
-
-    <span id="espaco" class="card">
-    </span>
-   
-    3
-    4
-    5
-    6
-    7
-    8
-    9
-    10
-    11
-    12
-    13
-    14
-    15
-    16
-    17
-    18
-
+    
+    <div id="" class="titulo">
+        <h1>
+            <marquee scrollamount="6" behavior="1ms" direction="linear">Cruzando com Kevin&João</marquee>
+                
+    </div>
+    <div class="container">
+        <table id="tb_cruzadinha"></table>
+    </div>
+    
     <div id="divPergunta" class="pergunta">
-
         <h4>
             <span class="titulo">1</span>
             A ___ é o componente principal de um computador responsável por executar as instruções e processar os
             dados.
             Ela é conhecida como o "cérebro" do computador.
-
-
-            <input id="input_1" oninput="inp_1()" placeholder="Entre com a resposta" type="text"> <br>
+            <input id="input_1" oninput="inp_1()" placeholder="Entre com a resposta" type="text"> <span id="erro" ></span> <br>
         </h4>
-
-
     </div>
-
-
-
-
-    <!-- <div class="card">
-        <div class="fundo_preto">A</div>
-        <div class="fundo_preto">B</div>
-    </div> -->
-
-    <div class="questionario">
-
-        <!-- <div class="lista">
-
-
-
-            
-
-
-            
-
-            
-
-        </div>
-
-
-        <div class="lista">
-
-           
-           
-
-
-            <h4>
-                <span class="titulo">8</span>
-                O __ é um conjunto de fios que transporta informações sobre a localização de memória ou dispositivos de
-                E/S.
-                O ___ é um conjunto de fios que transporta os próprios dados entre a CPU e a memória ou dispositivos de
-                E/S.
-            </h4> <input class="campoPergunta" type="text"> <input class="campoPergunta" type="text"> <br>
-
-        </div>
-
-        <div class="lista">
-
-            <h4>
-                <span class="titulo">9</span>
-                Os processadores __ e __ são fabricados pela Intel. O processador Intel Core ___ foi lançado pela
-                primeira vez em 2009, enquanto o Intel Core __ foi lançado em 2008. Ambos os processadores são
-                conhecidos por sua potência e desempenho em tarefas exigentes. O __ geralmente é usado em computadores
-                voltados para tarefas de médio porte, enquanto o __ é mais comumente encontrado em computadores de alto
-                desempenho, como estações de trabalho e laptops para jogos. As características específicas podem variar
-                entre diferentes gerações e modelos desses processadores.
-
-            </h4> <input class="campoPergunta" type="text"> <input class="campoPergunta" type="text"> <br>
-
-            <h4>
-                <span class="titulo">10</span>
-                Um processador ___ possui dois núcleos de processamento independentes em um único chip, permitindo que
-                execute duas tarefas simultaneamente. Um exemplo de processador ___ é o Intel Core 2 Duo. Já um
-                processador ____ possui quatro núcleos de processamento, permitindo maior capacidade de multitarefa e
-                processamento paralelo. Um exemplo é o Intel Core i7-7700K
-
-            </h4> <input class="campoPergunta" type="text"> <input class="campoPergunta" type="text"> <br>
-
-            <h4>
-                <span class="titulo">11</span>
-                ___ são unidades de execução dentro de um processo. Elas representam caminhos independentes de execução
-                que podem ser gerenciados pelo sistema operacional. Threads permitem a execução simultânea de várias
-                partes de um programa. Um exemplo de utilização de threads é um navegador da web que pode executar
-                várias tarefas em paralelo, como baixar arquivos enquanto renderiza uma página da web.
-
-            </h4> <input class="campoPergunta" type="text"> <br>
-
-            <h4>
-                <span class="titulo">12</span>
-                A ____ é uma memória de alta velocidade e baixa latência que armazena dados frequentemente acessados
-                pelo processador. Ela atua como uma camada intermediária entre o processador e a memória principal,
-                permitindo um acesso mais rápido aos dados. A utilização da ____ ajuda a reduzir o tempo de acesso à
-                memória principal, melhorando o desempenho do sistema como um todo.
-
-
-            </h4> <input class="campoPergunta" type="text"> <br>
-
-        </div>
-
-
-    </div> -->
 
 </body>
 
@@ -169,15 +59,14 @@
                 A ___ é um componente da CPU que realiza operações lógicas e aritméticas, como adição, subtração,
                 multiplicação,
                 divisão e comparações. Ela desempenha um papel crucial no processamento dos dados.
-                <input id="input_2" type="text" oninput="inp_2()">
+                <input id="input_2" type="text" oninput="inp_2()"> <span id="erro" ></span>
 
             </h4>  <br>
             `
 
-        } else if (lista_respostas[0] == '') {
-            alterarCorTextoQuadradinho('linha_3', 2, 'red', '');
-            alterarCorTextoQuadradinho('linha_3', 3, 'red', '');
-            alterarCorTextoQuadradinho('linha_3', 4, 'red', '');
+        } else if (lista_respostas[0] != 'CPU') {
+            erro.innerHTML = `&#x1F534`
+           
 
         }
     }
@@ -203,15 +92,14 @@
                 localizados no
                 interior da CPU.
 
-                <input id="input_3" type="text" oninput="inp_3()">
+                <input id="input_3" type="text" oninput="inp_3()"> <span id="erro" ></span>
 
                 
             </h4>  <br>
             `
-        } else if (lista_respostas[1] == '') {
-            alterarCorTextoQuadradinho('linha_3', 4, 'red', '');
-            alterarCorTextoQuadradinho('linha_4', 4, 'red', '');
-            alterarCorTextoQuadradinho('linha_5', 4, 'red', '');
+        } else if (lista_respostas[1] != 'ULA') {
+            erro.innerHTML = `&#x1F534`
+           
         }
     }
 
@@ -240,22 +128,13 @@
                 <span class="titulo">4</span>
                 O ___ é um conjunto de fios que transporta informações sobre a localização de memória ou dispositivos de E/S. .
 
-                <input id="input_4" type="text" oninput="inp_4()">
+                <input id="input_4" type="text" oninput="inp_4()"> <span id="erro" ></span>
                
             </h4> > <br>
             `
-        } else if (lista_respostas[2] == '') {
-            alterarCorTextoQuadradinho('linha_5', 4, 'red', '');
-            alterarCorTextoQuadradinho('linha_5', 5, 'red', '');
-            alterarCorTextoQuadradinho('linha_5', 6, 'red', '');
-            alterarCorTextoQuadradinho('linha_5', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_5', 8, 'red', '');
-            alterarCorTextoQuadradinho('linha_5', 9, 'red', '');
-            alterarCorTextoQuadradinho('linha_5', 10, 'red', '');
-            alterarCorTextoQuadradinho('linha_5', 11, 'BLUE', '');
-            alterarCorTextoQuadradinho('linha_5', 12, 'RED', '');
-            alterarCorTextoQuadradinho('linha_5', 13, 'RED', '');
-            alterarCorTextoQuadradinho('linha_5', 14, 'RED', '');
+        } else if (lista_respostas[2] != 'ADDRESS BUS') {
+            erro.innerHTML = `&#x1F534`
+           
 
         }
     }
@@ -287,25 +166,14 @@
                 <span class="titulo">5</span>
                 __________ é uma memória volátil usada para armazenar dados temporariamente enquanto o computador está em funcionamento.  
 
-                <input id="input_5" type="text" oninput="inp_5()">
+                <input id="input_5" type="text" oninput="inp_5()"> <span id="erro" ></span>
                 
             </h4> <br>
 
             `
-        } else if (lista_respostas[3] == '') {
-            alterarCorTextoQuadradinho('linha_5', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_6', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_7', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_8', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_9', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_10', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_11', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_12', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_13', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_14', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_15', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_16', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_17', 7, 'red', '');
+        } else if (lista_respostas[3] != 'REGISTRADORES') {
+            erro.innerHTML = `&#x1F534`
+           
 
         }
     }
@@ -326,13 +194,12 @@
             <h4>
                 <span class="titulo">6</span>
                 _______ é uma memória não volátil que contém instruções e dados que não podem ser alterados. 
-                <input id="input_6" type="text" oninput="inp_6()">
+                <input id="input_6" type="text" oninput="inp_6()"> <span id="erro" ></span>
             </h4> <br>
             `
-        } else if (lista_respostas[4] == '') {
-            alterarCorTextoQuadradinho('linha_11', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_11', 8, 'red', '');
-            alterarCorTextoQuadradinho('linha_11', 9, 'red', '');
+        } else if (lista_respostas[4] != 'RAM') {
+            erro.innerHTML = `&#x1F534`
+           
         }
     }
 
@@ -350,15 +217,14 @@
             alterarCorTextoQuadradinho('linha_15', 9, 'GREEN', 'M');
             divPergunta.innerHTML = ` 
             <h4>
-            <span class="titulo">6</span>
+            <span class="titulo">7</span>
             Qual é o nome de uma linha popular de processadores da Intel lançada em 2008, que inclui modelos como o ____-9700K e o ____-10700K?
-                <input id="input_7" type="text" oninput="inp_7()">
+                <input id="input_7" type="text" oninput="inp_7()"> <span id="erro" ></span>
             </h4><br> 
             `
-        } else if (lista_respostas[5] == '') {
-            alterarCorTextoQuadradinho('linha_15', 7, 'red', '');
-            alterarCorTextoQuadradinho('linha_15', 8, 'red', '');
-            alterarCorTextoQuadradinho('linha_15', 9, 'red', '');
+        } else if (lista_respostas[5] != 'ROM') {
+            erro.innerHTML = `&#x1F534`
+           
         }
     }
 
@@ -377,16 +243,17 @@
 
             divPergunta.innerHTML = ` 
             <h4>
-            <span class="titulo">6</span>
+            <span class="titulo">8</span>
                 ________ é uma memória não volátil usada em dispositivos de armazenamento como pen drives, cartões de memória e unidades de estado sólido. 
-            <input id="input_8" type="text" oninput="inp_8()">
+            <input id="input_8" type="text" oninput="inp_8()"> <span id="erro" ></span>
+            </h4>
             `;
 
-          
+
+
+        } else if (lista_respostas[6] != 'I7') {
+            erro.innerHTML = `&#x1F534`
             
-        } else if (lista_respostas[6] == '') {
-            alterarCorTextoQuadradinho('linha_8', 7, 'RED', '');
-            alterarCorTextoQuadradinho('linha_8', 8, 'RED', '');
         }
     }
 
@@ -399,25 +266,22 @@
         console.log(`ONCHANGE_7`, input_8.value);
 
         if (lista_respostas[7] == 'FLASH') {
-            alterarCorTextoQuadradinho('linha_17', 5, 'GREEN', 'F');
-            alterarCorTextoQuadradinho('linha_17', 6, 'GREEN', 'L');
-            alterarCorTextoQuadradinho('linha_17', 7, 'GREEN', 'A');
-            alterarCorTextoQuadradinho('linha_17', 8, 'GREEN', 'S');
-            alterarCorTextoQuadradinho('linha_17', 9, 'GREEN', 'H');
+            alterarCorTextoQuadradinho('linha_17', 4, 'GREEN', 'F');
+            alterarCorTextoQuadradinho('linha_17', 5, 'GREEN', 'L');
+            alterarCorTextoQuadradinho('linha_17', 6, 'GREEN', 'A');
+            alterarCorTextoQuadradinho('linha_17', 7, 'GREEN', 'S');
+            alterarCorTextoQuadradinho('linha_17', 8, 'GREEN', 'H');
 
             divPergunta.innerHTML = `
             <h4>
-            <span class="titulo">6</span>
+            <span class="titulo">9</span>
             Um ________ possui dois núcleos de processamento independentes em um único chip, permitindo que execute duas tarefas simultaneamente.
-            <input id="input_9" type="text" oninput="inp_9()">
+            <input id="input_9" type="text" oninput="inp_9()"> <span id="erro" ></span>
             </h4>
             `;
-        } else if (lista_respostas[7] == '') {
-            alterarCorTextoQuadradinho('linha_17', 5, 'RED', '');
-            alterarCorTextoQuadradinho('linha_17', 6, 'RED', '');
-            alterarCorTextoQuadradinho('linha_17', 7, 'RED', '');
-            alterarCorTextoQuadradinho('linha_17', 8, 'RED', '');
-            alterarCorTextoQuadradinho('linha_17', 9, 'RED', '');
+        } else if (lista_respostas[7] != 'FLASH') {
+            erro.innerHTML = `&#x1F534`
+           
         }
     }
 
@@ -439,23 +303,17 @@
             alterarCorTextoQuadradinho('linha_11', 13, 'GREEN', 'R');
             alterarCorTextoQuadradinho('linha_12', 13, 'GREEN', 'E');
 
-            
+
             divPergunta.innerHTML = `
             <h4>
-            <span class="titulo">6</span>
+            <span class="titulo">10</span>
             ______ refere-se a dispositivos de armazenamento de grande capacidade, como discos rígidos, SSDs e fitas magnéticas. 
-            <input id="input_10" type="text" oninput="inp_10()">
+            <input id="input_10" type="text" oninput="inp_10()"> <span id="erro" ></span>
             </h4>
             `;
-        } else if (lista_respostas[8] == '') {
-            alterarCorTextoQuadradinho('linha_4', 13, 'RED', '');
-            alterarCorTextoQuadradinho('linha_5', 13, 'RED', '');
-            alterarCorTextoQuadradinho('linha_6', 13, 'RED', '');
-            alterarCorTextoQuadradinho('linha_7', 13, 'RED', '');
-            alterarCorTextoQuadradinho('linha_9', 13, 'RED', '');
-            alterarCorTextoQuadradinho('linha_10', 13, 'RED', '');
-            alterarCorTextoQuadradinho('linha_11', 13, 'RED', '');
-            alterarCorTextoQuadradinho('linha_12', 13, 'RED', '');
+        } else if (lista_respostas[8] != 'DUAL CORE') {
+            erro.innerHTML = `&#x1F534`
+            
         }
     }
 
@@ -485,28 +343,15 @@
 
             divPergunta.innerHTML = `
             <h4>
-            <span class="titulo">6</span>
+            <span class="titulo">11</span>
            _______ é um conjunto de fios que transporta os próprios dados entre a CPU e a memória ou dispositivos de E/S.
-            <input id="input_11" type="text" oninput="inp_11()">
-                
+            <input id="input_11" type="text" oninput="inp_11()"> <span id="erro" ></span>
             </h4>
             `;
 
-        } else if (lista_respostas[9] == '') {
-            alterarCorTextoQuadradinho('linha_12', 12, 'RED', ''); // M
-            alterarCorTextoQuadradinho('linha_12', 13, 'RED', ''); // E
-            alterarCorTextoQuadradinho('linha_12', 14, 'RED', ''); // M
-            alterarCorTextoQuadradinho('linha_12', 15, 'RED', ''); // Ó
-            alterarCorTextoQuadradinho('linha_12', 16, 'RED', ''); // R
-            alterarCorTextoQuadradinho('linha_12', 17, 'RED', ''); // I
-            alterarCorTextoQuadradinho('linha_12', 18, 'RED', ''); // A
-            alterarCorTextoQuadradinho('linha_12', 20, 'RED', ''); // D
-            alterarCorTextoQuadradinho('linha_12', 21, 'RED', ''); // E
-            alterarCorTextoQuadradinho('linha_12', 23, 'RED', ''); // M
-            alterarCorTextoQuadradinho('linha_12', 24, 'RED', ''); // A
-            alterarCorTextoQuadradinho('linha_12', 25, 'RED', ''); // S
-            alterarCorTextoQuadradinho('linha_12', 26, 'RED', ''); // S
-            alterarCorTextoQuadradinho('linha_12', 27, 'RED', ''); // A
+        } else if (lista_respostas[9] != 'MEMÓRIA DE MASSA') {
+            erro.innerHTML = `&#x1F534`
+           
         }
     }
 
@@ -519,29 +364,24 @@
         console.log(`ONCHANGE_10`, input_11.value);
 
         if (lista_respostas[10] == 'DATA BUS') {
-            alterarCorTextoQuadradinho('linha_6', 26, 'GREEN', 'D'); //D
-            alterarCorTextoQuadradinho('linha_7', 26, 'GREEN', 'A'); //A
-            alterarCorTextoQuadradinho('linha_8', 26, 'GREEN', 'T'); //T
-            alterarCorTextoQuadradinho('linha_9', 26, 'GREEN', 'A'); //A
-            alterarCorTextoQuadradinho('linha_11', 26, 'GREEN', 'B'); //B
-            alterarCorTextoQuadradinho('linha_12', 26, 'GREEN', 'U'); //U
-            alterarCorTextoQuadradinho('linha_13', 26, 'GREEN', 'S'); //S
+            alterarCorTextoQuadradinho('linha_5', 26, 'GREEN', 'D'); //D
+            alterarCorTextoQuadradinho('linha_6', 26, 'GREEN', 'A'); //A
+            alterarCorTextoQuadradinho('linha_7', 26, 'GREEN', 'T'); //T
+            alterarCorTextoQuadradinho('linha_8', 26, 'GREEN', 'A'); //A
+            alterarCorTextoQuadradinho('linha_9', 26, 'BLUE', ''); //
+            alterarCorTextoQuadradinho('linha_10', 26, 'GREEN', 'B'); //B
+            alterarCorTextoQuadradinho('linha_11', 26, 'GREEN', 'U'); //U
+            alterarCorTextoQuadradinho('linha_12', 26, 'GREEN', 'S'); //S
             divPergunta.innerHTML = `
             <h4>
-            <span class="titulo">6</span>
+            <span class="titulo">12</span>
             Um processador ______ possui quatro núcleos de processamento, permitindo maior capacidade de multitarefa e processamento paralelo. Um exemplo é o Intel Core i7-7700K. 
-            <input id="input_12" type="text" oninput="inp_12()">
+            <input id="input_12" type="text" oninput="inp_12()"> <span id="erro" ></span>
             </h4>
             `
-
-        } else if (lista_respostas[10] == '') {
-            alterarCorTextoQuadradinho('linha_6', 26, 'RED', ''); //D
-            alterarCorTextoQuadradinho('linha_7', 26, 'RED', ''); //A
-            alterarCorTextoQuadradinho('linha_8', 26, 'RED', ''); //T
-            alterarCorTextoQuadradinho('linha_9', 26, 'RED', ''); //A
-            alterarCorTextoQuadradinho('linha_11', 26, 'RED', ''); //B
-            alterarCorTextoQuadradinho('linha_12', 26, 'RED', ''); //U
-            alterarCorTextoQuadradinho('linha_13', 26, 'RED', ''); //S
+        } else if (lista_respostas[10] != 'DATA BUS') {
+            erro.innerHTML = `&#x1F534`
+          
         }
     }
 
@@ -565,20 +405,15 @@
 
             divPergunta.innerHTML = `
             <h4>
-            <span class="titulo">6</span> _______ é um recurso de hardware que permite que dispositivos periféricos acessem diretamente a memória do sistema, sem a intervenção da CPU. Isso ajuda a melhorar a eficiência do sistema, reduzindo a sobrecarga da CPU durante transferências de dados de alta velocidade. 
-            <input id="input_13" type="text" oninput="inp_13()">
+            <span class="titulo">13</span>
+            _______ é um recurso de hardware que permite que dispositivos periféricos acessem diretamente a memória do sistema, sem a intervenção da CPU. Isso ajuda a melhorar a eficiência do sistema, reduzindo a sobrecarga da CPU durante transferências de dados de alta velocidade. 
+            <input id="input_13" type="text" oninput="inp_13()"> <span id="erro" ></span>
             </h4>
             `;
 
-        } else if (lista_respostas[11] == '') {
-            alterarCorTextoQuadradinho('linha_10', 24, 'RED', ''); //Q
-            alterarCorTextoQuadradinho('linha_11', 24, 'RED', ''); //U
-            alterarCorTextoQuadradinho('linha_12', 24, 'RED', ''); //A
-            alterarCorTextoQuadradinho('linha_13', 24, 'RED', ''); //D
-            alterarCorTextoQuadradinho('linha_15', 24, 'RED', ''); //C
-            alterarCorTextoQuadradinho('linha_16', 24, 'RED', ''); //O
-            alterarCorTextoQuadradinho('linha_17', 24, 'RED', ''); //R
-            alterarCorTextoQuadradinho('linha_18', 24, 'RED', ''); //E
+        } else if (lista_respostas[11] != 'QUAD CORE') {
+            erro.innerHTML = `&#x1F534`
+           
         }
     }
 
@@ -597,15 +432,14 @@
 
             divPergunta.innerHTML = `
             <h4>
-            <span class="titulo">6</span>
+            <span class="titulo">14</span>
             Qual é o nome de uma linha popular de processadores da Intel lançada em 2009, que inclui modelos como o ____-9600K e o ____-10600K?
-            <input id="input_14" type="text" oninput="inp_14()">
+            <input id="input_14" type="text" oninput="inp_14()"> <span id="erro" ></span>
             `;
 
-        } else if (lista_respostas[12] == '') {
-            alterarCorTextoQuadradinho('linha_12', 20, 'RED', ''); //D
-            alterarCorTextoQuadradinho('linha_13', 20, 'RED', ''); //M
-            alterarCorTextoQuadradinho('linha_14', 20, 'RED', ''); //A
+        } else if (lista_respostas[12] != 'DMA') {
+            erro.innerHTML = `&#x1F534`
+           
         }
     }
 
@@ -623,15 +457,15 @@
 
             divPergunta.innerHTML = `
             <h4>
-            <span class="titulo">6</span>
+            <span class="titulo">15</span>
             _________ é uma memória que pode ser programada e apagada eletronicamente. 
-            <input id="input_15" type="text" oninput="inp_15()">
+            <input id="input_15" type="text" oninput="inp_15()"> <span id="erro" ></span>
             </h4>
             `;
 
-        } else if (lista_respostas[13] == '') {
-            alterarCorTextoQuadradinho('linha_12', 17, 'RED', ''); //I
-            alterarCorTextoQuadradinho('linha_13', 17, 'RED', ''); //5
+        } else if (lista_respostas[13] != 'I5') {
+            erro.innerHTML = `&#x1F534`
+            
         }
     }
 
@@ -652,18 +486,14 @@
 
             divPergunta.innerHTML = `
             <h4>
-            <span class="titulo">6</span>
+            <span class="titulo">16</span>
             _______ são unidades de execução dentro de um processo. Elas representam caminhos independentes de execução que podem ser gerenciados pelo sistema operacional.
-            <input id="input_16" type="text" oninput="inp_16()">
+            <input id="input_16" type="text" oninput="inp_16()"> <span id="erro" ></span>
             </h4>
             `;
 
-        } else if (lista_respostas[14] == '') {
-            alterarCorTextoQuadradinho('linha_18', 24, 'RED', ''); //E
-            alterarCorTextoQuadradinho('linha_18', 25, 'RED', ''); //P
-            alterarCorTextoQuadradinho('linha_18', 26, 'RED', ''); //R
-            alterarCorTextoQuadradinho('linha_18', 27, 'RED', ''); //O
-            alterarCorTextoQuadradinho('linha_18', 28, 'RED', ''); //M
+        } else if (lista_respostas[14] != 'EPROM') {
+           
         }
     }
 
@@ -676,30 +506,25 @@
         console.log(`ONCHANGE_16`, input_16.value);
 
         if (lista_respostas[15] == 'THREADS') {
-            alterarCorTextoQuadradinho('linha_7', 22, 'GREEN', 'T'); //T
-            alterarCorTextoQuadradinho('linha_7', 23, 'GREEN', 'H'); //H
-            alterarCorTextoQuadradinho('linha_7', 24, 'GREEN', 'R'); //R
-            alterarCorTextoQuadradinho('linha_7', 25, 'GREEN', 'E'); //E
-            alterarCorTextoQuadradinho('linha_7', 26, 'GREEN', 'A'); //A
-            alterarCorTextoQuadradinho('linha_7', 27, 'GREEN', 'D'); //D
-            alterarCorTextoQuadradinho('linha_7', 28, 'GREEN', 'S'); //S
+            alterarCorTextoQuadradinho('linha_6', 22, 'GREEN', 'T'); //T
+            alterarCorTextoQuadradinho('linha_6', 23, 'GREEN', 'H'); //H
+            alterarCorTextoQuadradinho('linha_6', 24, 'GREEN', 'R'); //R
+            alterarCorTextoQuadradinho('linha_6', 25, 'GREEN', 'E'); //E
+            alterarCorTextoQuadradinho('linha_6', 26, 'GREEN', 'A'); //A
+            alterarCorTextoQuadradinho('linha_6', 27, 'GREEN', 'D'); //D
+            alterarCorTextoQuadradinho('linha_6', 28, 'GREEN', 'S'); //S
 
             divPergunta.innerHTML = `
             <h4>
-            <span class="titulo">6</span>
+            <span class="titulo">17</span>
             ____ é um sinal utilizado para selecionar um dispositivo específico em um barramento de dados ou endereço. Ele é usado para indicar qual dispositivo receberá ou enviará dados quando vários dispositivos estiverem conectados ao mesmo barramento. 
-            <input id="input_17" type="text" oninput="inp_17()">
+            <input id="input_17" type="text" oninput="inp_17()"> <span id="erro" ></span>
             </h4>
             `;
 
-        } else if (lista_respostas[15] == '') {
-            alterarCorTextoQuadradinho('linha_7', 22, 'RED', ''); //T
-            alterarCorTextoQuadradinho('linha_7', 23, 'RED', ''); //H
-            alterarCorTextoQuadradinho('linha_7', 24, 'RED', ''); //R
-            alterarCorTextoQuadradinho('linha_7', 25, 'RED', ''); //E
-            alterarCorTextoQuadradinho('linha_7', 26, 'RED', ''); //A
-            alterarCorTextoQuadradinho('linha_7', 27, 'RED', ''); //D
-            alterarCorTextoQuadradinho('linha_7', 28, 'RED', ''); //S
+        } else if (lista_respostas[15] != 'THREADS') {
+            erro.innerHTML = `&#x1F534`
+          
         }
     }
 
@@ -721,12 +546,9 @@
 
             window.location.href = `https://pt.wikipedia.org/wiki/Bovinos#:~:text=Os%20bovinos%20(latim%20cient%C3%ADfico%3A%20Bovinae,esp%C3%A9cies%20agrupadas%20em%20nove%20g%C3%AAneros.`
 
-        } else if (lista_respostas[17] == '') {
-            alterarCorTextoQuadradinho('linha_9', 13, 'RED', ''); //C
-            alterarCorTextoQuadradinho('linha_9', 14, 'RED', ''); //A
-            alterarCorTextoQuadradinho('linha_9', 15, 'RED', ''); //C
-            alterarCorTextoQuadradinho('linha_9', 16, 'RED', ''); //H
-            alterarCorTextoQuadradinho('linha_9', 17, 'RED', ''); //E
+        } else if (lista_respostas[17] != 'CACHE') {
+            erro.innerHTML = `&#x1F534`
+           
         }
     }
 
@@ -739,20 +561,20 @@
         console.log(`ONCHANGE_16`, input_17.value);
 
         if (lista_respostas[16] == 'CS') {
-            alterarCorTextoQuadradinho('linha_6', 28, 'GREEN', 'C'); //C
-            alterarCorTextoQuadradinho('linha_7', 28, 'GREEN', 'S'); //S
+            alterarCorTextoQuadradinho('linha_5', 28, 'GREEN', 'C'); //C
+            alterarCorTextoQuadradinho('linha_6', 28, 'GREEN', 'S'); //S
 
             divPergunta.innerHTML = `
             <h4>
-            <span class="titulo">6</span>
+            <span class="titulo">18</span>
             ______ é um sinal utilizado para selecionar um dispositivo específico em um barramento de dados ou endereço. Ele é usado para indicar qual dispositivo receberá ou enviará dados quando vários dispositivos estiverem conectados ao mesmo barramento. 
-            <input id="input_18" type="text" oninput="inp_18()">
+            <input id="input_18" type="text" oninput="inp_18()"> <span id="erro" ></span>
             </h4>
             `;
 
-        } else if (lista_respostas[15] == '') {
-            alterarCorTextoQuadradinho('linha_6', 28, 'RED', ''); //C
-            alterarCorTextoQuadradinho('linha_7', 28, 'RED', ''); //S
+        } else if (lista_respostas[15] != 'CS') {
+            erro.innerHTML = `&#x1F534`
+           
         }
     }
 
@@ -830,12 +652,12 @@
     alterarCorTextoQuadradinho('linha_8', 8, 'red', '');
 
     // FLASH
-    alterarCorTextoQuadradinho('linha_17', 4, 'GOLD', '8-');
+    alterarCorTextoQuadradinho('linha_17', 3, 'GOLD', '8-');
+    alterarCorTextoQuadradinho('linha_17', 4, 'RED', '');
     alterarCorTextoQuadradinho('linha_17', 5, 'RED', '');
     alterarCorTextoQuadradinho('linha_17', 6, 'RED', '');
-    //alterarCorTextoQuadradinho('linha_17', 7, 'RED', '');s
+    alterarCorTextoQuadradinho('linha_17', 7, 'RED', '');
     alterarCorTextoQuadradinho('linha_17', 8, 'RED', '');
-    alterarCorTextoQuadradinho('linha_17', 9, 'RED', '');
 
     // DUAL CORE
     alterarCorTextoQuadradinho('linha_3', 13, 'GOLD', '9-');
@@ -869,15 +691,15 @@
     alterarCorTextoQuadradinho('linha_12', 27, 'RED', ''); // A
 
     // DATA BUS
-    alterarCorTextoQuadradinho('linha_5', 26, 'GOLD', '11-');
-    alterarCorTextoQuadradinho('linha_6', 26, 'RED', ''); //D
-    alterarCorTextoQuadradinho('linha_7', 26, 'RED', ''); //A
-    alterarCorTextoQuadradinho('linha_8', 26, 'RED', ''); //T
-    alterarCorTextoQuadradinho('linha_9', 26, 'RED', ''); //A
-    alterarCorTextoQuadradinho('linha_10', 26, 'BLUE', ''); //
-    alterarCorTextoQuadradinho('linha_11', 26, 'RED', ''); //B
-    alterarCorTextoQuadradinho('linha_12', 26, 'RED', ''); //U
-    alterarCorTextoQuadradinho('linha_13', 26, 'RED', ''); //S
+    alterarCorTextoQuadradinho('linha_4', 26, 'GOLD', '11-');
+    alterarCorTextoQuadradinho('linha_5', 26, 'RED', ''); //D
+    alterarCorTextoQuadradinho('linha_6', 26, 'RED', ''); //A
+    alterarCorTextoQuadradinho('linha_7', 26, 'RED', ''); //T
+    alterarCorTextoQuadradinho('linha_8', 26, 'RED', ''); //A
+    alterarCorTextoQuadradinho('linha_9', 26, 'BLUE', ''); //
+    alterarCorTextoQuadradinho('linha_10', 26, 'RED', ''); //B
+    alterarCorTextoQuadradinho('linha_11', 26, 'RED', ''); //U
+    alterarCorTextoQuadradinho('linha_12', 26, 'RED', ''); //S
 
     // QUAD CORE
     alterarCorTextoQuadradinho('linha_9', 24, 'GOLD', '12-'); //
@@ -911,19 +733,19 @@
     alterarCorTextoQuadradinho('linha_18', 28, 'RED', ''); //M
 
     // THREADS
-    alterarCorTextoQuadradinho('linha_7', 21, 'GOLD', '16-'); //
-    alterarCorTextoQuadradinho('linha_7', 22, 'RED', ''); //T
-    alterarCorTextoQuadradinho('linha_7', 23, 'RED', ''); //H
-    alterarCorTextoQuadradinho('linha_7', 24, 'RED', ''); //R
-    alterarCorTextoQuadradinho('linha_7', 25, 'RED', ''); //E
-    alterarCorTextoQuadradinho('linha_7', 26, 'RED', ''); //A
-    alterarCorTextoQuadradinho('linha_7', 27, 'RED', ''); //D
-    alterarCorTextoQuadradinho('linha_7', 28, 'RED', ''); //S
+    alterarCorTextoQuadradinho('linha_6', 21, 'GOLD', '16-'); //
+    alterarCorTextoQuadradinho('linha_6', 22, 'RED', ''); //T
+    alterarCorTextoQuadradinho('linha_6', 23, 'RED', ''); //H
+    alterarCorTextoQuadradinho('linha_6', 24, 'RED', ''); //R
+    alterarCorTextoQuadradinho('linha_6', 25, 'RED', ''); //E
+    alterarCorTextoQuadradinho('linha_6', 26, 'RED', ''); //A
+    alterarCorTextoQuadradinho('linha_6', 27, 'RED', ''); //D
+    alterarCorTextoQuadradinho('linha_6', 28, 'RED', ''); //S
 
     // CS
-    alterarCorTextoQuadradinho('linha_5', 28, 'GOLD', '17-'); //
-    alterarCorTextoQuadradinho('linha_6', 28, 'RED', ''); //C
-    alterarCorTextoQuadradinho('linha_7', 28, 'RED', ''); //S4
+    alterarCorTextoQuadradinho('linha_4', 28, 'GOLD', '17-'); //
+    alterarCorTextoQuadradinho('linha_5', 28, 'RED', ''); //C
+    alterarCorTextoQuadradinho('linha_6', 28, 'RED', ''); //S4
 
     // CACHE
     alterarCorTextoQuadradinho('linha_9', 12, 'GOLD', '18-'); //
@@ -934,9 +756,9 @@
     alterarCorTextoQuadradinho('linha_9', 17, 'RED', ''); //E
 
     function gerar_cruzadinha() {
-        for (i = 1; i < 21; i++) {
+        for (i = 1; i < 20; i++) {
 
-            tb_sla.innerHTML += `
+            tb_cruzadinha.innerHTML += `
                 <tr id="linha_${i}">
                     <td id="coluna_1" class="fundo_preto"></td>
                     <td id="coluna_2" class="fundo_preto"></td>

@@ -22,9 +22,11 @@ body{
 
 
 .container {
-    margin: 2%;
-    text-align: center;
-    background-color: rgba(51, 0, 61, 0.103);
+    margin: auto;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    margin: 0% 25vw ;
 }
 
 .caixa input {
@@ -48,6 +50,7 @@ h1 {
     border-radius: 2px;
     width: 21px;
     height: 21px;
+    transition: 1s;
 }
 
 .fundo_vermelho {
@@ -55,6 +58,7 @@ h1 {
     border-radius: 2px;
     width: 21px;
     height: 21px;
+    transition: 1s;
 }
 
 .traco {
@@ -143,13 +147,8 @@ input{
 .pergunta{
     width: 250px;
     height: 100px;
-    margin-left: 40vw;
+    margin: auto;
     
     
 }
-
-.perguntaDaVez{
-    
-}
-
 
